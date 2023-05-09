@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-<!--    <test name="Edge">-->
-<!--        <parameter name="browser" value="edge"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="AutomationFramework.TestScripts.Script_Login"></class>-->
-<!--    </classes>-->
-<!--    </test>-->
+    <test name="Edge">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="AutomationFramework.TestScripts.Script_Login"></class>
+    </classes>
+    </test>
     <test name="Chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
