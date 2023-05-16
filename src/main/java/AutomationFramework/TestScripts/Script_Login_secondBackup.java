@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Script_Login_secondBackup extends Base {
     @Test(dataProvider = "validLogin",dataProviderClass = D_Login.class,groups = {"Reg","smoke"})
     public void valid_login(String TC_ID,String script,String username,String password) throws IOException {
-        HomePage homePage=new HomePage(driver);
+        HomePage homePage = new HomePage(driver);
         SigninPage signinPage = new SigninPage(driver);
         mytest = extent.createTest(TC_ID);
         mytest.log(Status.PASS,"Successfully lauched application");
