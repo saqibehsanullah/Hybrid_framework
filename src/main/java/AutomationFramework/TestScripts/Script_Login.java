@@ -49,28 +49,11 @@ public class Script_Login extends Base {
         mytest.log(Status.PASS,"Successfully lauched application");
 
         //click on sign In
-        homePage.click_signIN();
-        //driver.findElement(By.linkText("Sign In")).click();
-        //enter login details
+        homePage.click_signIN();//enter login details
         signinPage.enterUserDetails(username,password);
         mytest.log(Status.PASS,"Successfully the entered the details");
 
-
-        //driver.findElement(By.name("logid")).sendKeys(username);
-        //driver.findElement(By.name("pswd")).sendKeys(password);
-        //driver.findElement(By.xpath("//input[@value='Login']")).click();
-
         boolean displayed =signinPage.isErrorMessageDisplayed();
-               // driver.findElement(By.xpath("//b[text()=' Sorry we were unable to complete this step because :")).isDisplayed();
-//        if (displayed){
-//            System.out.println(Tc_ID+"PASS");
-//            mytest.log(Status.PASS,"The output is pass when output is "+displayed, MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
-//
-//        }else {
-//            System.out.println(Tc_ID+"FAIL");
-//            mytest.log(Status.PASS,"The output is fail when output is "+displayed, MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
-//
-//        }
         Assert.assertTrue(displayed,"The output is pased");
 
     }
